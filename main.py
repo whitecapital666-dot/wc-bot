@@ -35,10 +35,10 @@ async def main():
     dp = Dispatcher(storage=MemoryStorage())
 
     # Регистрируем роутеры в правильном порядке
-    dp.include_router(common_router)
-    dp.include_router(start_router)
-    dp.include_router(seller_router)
-    dp.include_router(buyer_router)
+dp.include_router(start_router)
+dp.include_router(seller_router)
+dp.include_router(buyer_router)
+dp.include_router(common_router)
 
     logger.info("White Capital Bot запущен")
     await dp.start_polling(bot, allowed_updates=dp.resolve_used_update_types())
