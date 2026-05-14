@@ -33,8 +33,7 @@ async def main():
         default=DefaultBotProperties(parse_mode=ParseMode.HTML)
     )
     dp = Dispatcher(storage=MemoryStorage())
-
-    # Регистрируем роутеры в правильном порядке
+# Регистрируем роутеры в правильном порядке
 dp.include_router(start_router)
 dp.include_router(seller_router)
 dp.include_router(buyer_router)
